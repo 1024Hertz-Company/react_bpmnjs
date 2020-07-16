@@ -597,9 +597,8 @@ module.exports = function(group, element, bpmnFactory, translate) {
     entryFactory.selectBox({
       id: 'assigneeList',
       label: translate('受理人'),
-      selectOptions:
-        async function(element) {
-          return await getData();
+      selectOptions: function(element) {
+          return getData();
         },
       modelProperty: 'assigneeList',
       multiple: 'multiple', // 加上这个方法变成多选下拉框
